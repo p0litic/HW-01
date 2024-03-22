@@ -1,0 +1,15 @@
+{
+	"name": "алмаз",
+	"plugin-id": "Text",
+	"sid": 355164467958665,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 292001806486825
+		}
+	],
+	"effectTypes": []
+}

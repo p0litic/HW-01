@@ -1,0 +1,21 @@
+{
+	"name": "ПлиточнийФон4",
+	"plugin-id": "TiledBg",
+	"sid": 294090251250187,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 852,
+		"height": 234,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 5293995,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

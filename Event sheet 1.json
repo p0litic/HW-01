@@ -1,0 +1,888 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "гроші",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 252685922816043
+		},
+		{
+			"eventType": "variable",
+			"name": "діамант",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 527848595659169
+		},
+		{
+			"eventType": "variable",
+			"name": "пушка",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 251434610789203
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 941331952935784,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite",
+					"sid": 761610824212616,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 213387615867750
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 439190472768969,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite",
+					"sid": 493503346002273,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 226075258572998
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 705341786257556,
+					"parameters": {
+						"object": "монета"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "монета",
+					"sid": 378921530829148
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 657264712869901,
+					"parameters": {
+						"variable": "гроші",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "money",
+					"sid": 651396237351121,
+					"parameters": {
+						"text": "гроші"
+					}
+				}
+			],
+			"sid": 546547051410942
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 561316898499981,
+					"parameters": {
+						"object": "трогать"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "трогать",
+					"sid": 780983725391190
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 833714460781231,
+					"parameters": {
+						"variable": "діамант",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "алмаз",
+					"sid": 129257446614834,
+					"parameters": {
+						"text": "діамант"
+					}
+				}
+			],
+			"sid": 366684140977456
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "Sprite",
+					"sid": 205356139912625,
+					"behaviorType": "Platform"
+				},
+				{
+					"id": "is-on-floor",
+					"objectClass": "Sprite",
+					"sid": 784238160545635,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite",
+					"sid": 939155295630586,
+					"parameters": {
+						"animation": "\"біг\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 597079839701618
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "Sprite",
+					"sid": 774536694181904,
+					"behaviorType": "Platform",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				},
+				{
+					"id": "is-on-floor",
+					"objectClass": "Sprite",
+					"sid": 790814922484272,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite",
+					"sid": 913634488981787,
+					"parameters": {
+						"animation": "\"стояти\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 525626022441935
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-jumping",
+					"objectClass": "Sprite",
+					"sid": 659914481616046,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sprite",
+					"sid": 492600345578164,
+					"parameters": {
+						"animation": "\"стрибати\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 399329526073086
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 160323027992500,
+					"parameters": {
+						"object": "Sprite4"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 779348160239685,
+					"parameters": {
+						"object": "Спрайт3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "TiledBackground6",
+					"sid": 764945492156728,
+					"parameters": {
+						"width": "TiledBackground6.width-30 "
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Sprite",
+					"sid": 292195901671963,
+					"behaviorType": "Блимання",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "set-default-controls",
+					"objectClass": "Sprite",
+					"sid": 878475018938890,
+					"behaviorType": "Platform",
+					"parameters": {
+						"default-controls": true
+					}
+				},
+				{
+					"id": "set-vector-x",
+					"objectClass": "Sprite",
+					"sid": 158263604694926,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-x": "-330"
+					}
+				},
+				{
+					"id": "set-vector-y",
+					"objectClass": "Sprite",
+					"sid": 842669375625816,
+					"behaviorType": "Platform",
+					"parameters": {
+						"vector-y": "-300"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "Sprite",
+					"sid": 112315087351997,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "20",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 817636802674509,
+					"parameters": {
+						"seconds": "1"
+					}
+				}
+			],
+			"sid": 205591617087192,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-width",
+					"objectClass": "TiledBackground6",
+					"sid": 435665737226939,
+					"parameters": {
+						"comparison": 2,
+						"width": "30"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 878382647267616
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 750699269410038,
+					"parameters": {
+						"variable": "гроші",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "money",
+					"sid": 285649090773276,
+					"parameters": {
+						"text": "гроші"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 623884048691441,
+					"parameters": {
+						"variable": "діамант",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "алмаз",
+					"sid": 684625485015804,
+					"parameters": {
+						"text": "діамант"
+					}
+				}
+			],
+			"sid": 701001174261472
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 677364948773477,
+					"parameters": {
+						"object": "Спрайт"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт",
+					"sid": 216018930259849
+				},
+				{
+					"id": "set-width",
+					"objectClass": "TiledBackground6",
+					"sid": 608036077976844,
+					"parameters": {
+						"width": "TiledBackground6.Width+30"
+					}
+				}
+			],
+			"sid": 494984063480433,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 109384644471605,
+					"parameters": {
+						"object": "Спрайт2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "TiledBackground6",
+					"sid": 552614654276953,
+					"parameters": {
+						"width": "-90"
+					}
+				}
+			],
+			"sid": 176801147628028
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 621686454122968,
+					"parameters": {
+						"object": "Спрайт5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт5",
+					"sid": 637783750968946
+				},
+				{
+					"id": "set-width",
+					"objectClass": "TiledBackground6",
+					"sid": 288198231192697,
+					"parameters": {
+						"width": "TiledBackground6.Width+30"
+					}
+				}
+			],
+			"sid": 453858098881137
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 749235562234629,
+					"parameters": {
+						"object": "Спрайт3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 539994407220476,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "Sprite",
+							"sid": 117334170909023,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-y",
+							"objectClass": "Sprite",
+							"sid": 995637460267382,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-200"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 859952447938677,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Спрайт3",
+							"sid": 663411609040792
+						}
+					],
+					"sid": 903596657409036
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 290403214994984
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 361412937871275
+						}
+					],
+					"sid": 302632961453866
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 287646188309609,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-mirrored",
+					"objectClass": "Спрайт11",
+					"sid": 772254540766693,
+					"isInverted": true
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 548604929867028,
+					"parameters": {
+						"variable": "пушка",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 597691111931522,
+					"parameters": {
+						"object-to-create": "Спрайт8",
+						"layer": "0",
+						"x": "Спрайт11.X",
+						"y": "Спрайт11.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Спрайт8",
+					"sid": 411411722730489,
+					"parameters": {
+						"animation": "\"Animation 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-bounce-off-solids",
+					"objectClass": "Спрайт8",
+					"sid": 714241255952669,
+					"behaviorType": "Куля",
+					"parameters": {
+						"state": false
+					}
+				}
+			],
+			"sid": 765841572040543
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 634382187857260,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "is-mirrored",
+					"objectClass": "Спрайт11",
+					"sid": 236457436884143
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 183526535405516,
+					"parameters": {
+						"variable": "пушка",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 635916689177558,
+					"parameters": {
+						"object-to-create": "Спрайт9",
+						"layer": "0",
+						"x": "Спрайт11.X",
+						"y": "Спрайт11.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Спрайт9",
+					"sid": 941384053959287,
+					"parameters": {
+						"animation": "\"Animation 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-bounce-off-solids",
+					"objectClass": "Спрайт9",
+					"sid": 784106473247352,
+					"behaviorType": "Куля",
+					"parameters": {
+						"state": false
+					}
+				}
+			],
+			"sid": 502810812126833
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Спрайт8",
+					"sid": 523849604482948,
+					"parameters": {
+						"object": "Спрайт3"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Спрайт9",
+					"sid": 212899181878540,
+					"parameters": {
+						"object": "Спрайт3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт3",
+					"sid": 978041423876772
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 714778596977474,
+					"parameters": {
+						"variable": "гроші",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "money",
+					"sid": 504704935448867,
+					"parameters": {
+						"text": "гроші"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт8",
+					"sid": 596139603034879
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт9",
+					"sid": 636619757989955
+				}
+			],
+			"sid": 287996715153380,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 261811302741690
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 760435360892040,
+					"parameters": {
+						"variable": "пушка",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Спрайт11",
+					"sid": 644010589296936,
+					"parameters": {
+						"object": "Sprite",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 121435954961890
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 838027442981649,
+					"parameters": {
+						"object": "Спрайт11"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 572954298546879,
+					"parameters": {
+						"variable": "пушка",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 977665781603378
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 618430312818592,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 913731296543679,
+					"parameters": {
+						"variable": "пушка",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Спрайт11",
+					"sid": 139896500798092,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 257609385467554
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 840504759072562,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 386045847832249,
+					"parameters": {
+						"variable": "пушка",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Спрайт11",
+					"sid": 512089384616601,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 157076727447163
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Спрайт8",
+					"sid": 914185449525729,
+					"parameters": {
+						"object": "TiledBackground3"
+					}
+				},
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Спрайт9",
+					"sid": 558319648614110,
+					"parameters": {
+						"object": "TiledBackground3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт8",
+					"sid": 532536026770980
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Спрайт9",
+					"sid": 454852754133909
+				}
+			],
+			"sid": 749054981478276,
+			"isOrBlock": true
+		}
+	],
+	"sid": 885725700891508
+}

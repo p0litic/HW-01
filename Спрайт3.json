@@ -1,0 +1,67 @@
+{
+	"name": "Спрайт3",
+	"plugin-id": "Sprite",
+	"sid": 364028363029246,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Синусоїда",
+			"sid": 887616121182511
+		},
+		{
+			"behaviorId": "solid",
+			"name": "ТвердеТіло",
+			"sid": 366491008918380
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 74,
+						"height": 53,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 97578,
+						"collisionPoly": {
+							"points": [
+								0.8378378378378378,
+								0.03773584905660377,
+								0.9054054054054054,
+								0.03773584905660377,
+								0.9864864864864865,
+								0.7547169811320755,
+								0.9594594594594594,
+								0.8679245283018868,
+								0.7297297297297297,
+								0.9811320754716981,
+								0.013513513513513514,
+								0.9811320754716981,
+								0.08108108108108109,
+								0.1320754716981132
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 879290687698349,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

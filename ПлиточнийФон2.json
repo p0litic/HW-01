@@ -1,0 +1,52 @@
+{
+	"name": "ПлиточнийФон2",
+	"plugin-id": "TiledBg",
+	"sid": 450890617210706,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Синусоїда",
+			"sid": 487662030835265
+		},
+		{
+			"behaviorId": "jumpthru",
+			"name": "ПрострибуваніПлатформи",
+			"sid": 378732810845484
+		},
+		{
+			"behaviorId": "solid",
+			"name": "ТвердеТіло",
+			"sid": 662420893018484
+		},
+		{
+			"behaviorId": "shadowcaster",
+			"name": "Тінеутворювач",
+			"sid": 556020098756985
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Платформер",
+			"sid": 205833265430724
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Платформер2",
+			"sid": 958020243653864
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 71,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1230195,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

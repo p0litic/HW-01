@@ -1,0 +1,29 @@
+{
+	"name": "ПлиточнийФон6",
+	"plugin-id": "TiledBg",
+	"sid": 562483607827629,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Змінна1",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 727062901229354
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 852,
+		"height": 234,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 7216750,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

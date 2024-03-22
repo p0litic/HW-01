@@ -1,0 +1,68 @@
+{
+	"name": "Спрайт5",
+	"plugin-id": "Sprite",
+	"sid": 956591095125073,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Синусоїда",
+			"sid": 110389264672492
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 30,
+						"height": 30,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9520761,
+						"collisionPoly": {
+							"points": [
+								0.2,
+								0,
+								0.8,
+								0,
+								1,
+								0.2,
+								1,
+								0.4666666666666667,
+								0.9333333333333333,
+								0.6,
+								0.5666666666666667,
+								0.9666666666666667,
+								0.43333333333333335,
+								0.9666666666666667,
+								0.06666666666666667,
+								0.6,
+								0,
+								0.4666666666666667,
+								0,
+								0.2
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 623570116883867,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"name": "Sprite2",
+	"plugin-id": "Sprite",
+	"sid": 148576313542597,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 895331115485239
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 129652422173895
+		},
+		{
+			"behaviorId": "shadowcaster",
+			"name": "ShadowCaster",
+			"sid": 660701440672171
+		},
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 661022870813269
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 72,
+						"height": 72,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7941543,
+						"collisionPoly": {
+							"points": [
+								0.08333333333333333,
+								0.013888888888888888,
+								0.9444444444444444,
+								0.027777777777777776,
+								0.9861111111111112,
+								0.08333333333333333,
+								0.9722222222222222,
+								0.9444444444444444,
+								0.9166666666666666,
+								0.9861111111111112,
+								0.05555555555555555,
+								0.9722222222222222,
+								0.013888888888888888,
+								0.9166666666666666,
+								0.013888888888888888,
+								0.08333333333333333
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 572282214686387,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
